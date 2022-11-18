@@ -5,13 +5,13 @@ import Randombutton from "./randombutton";
 const Home = () => {
 	const [lights, setLights] = useState({
 		red:'off',
-		yellow:'on',
+		yellow:'off',
 		green:'off',
 	})
 /*Estructura useState: valor, funcion, valor por defecto */
 
 	return (
-		<div className="text-center">
+		<div className="text-center ms-3">
 			<div className="text-center black"></div>
 			<div className="text-center traffic">
 				<Light 
@@ -34,7 +34,10 @@ const Home = () => {
 					/>
 			</div>
 			<div>
-				<Randombutton/>
+				<Randombutton
+				setLights={setLights}
+				lights={lights}
+				/>
 			</div>
 		</div>
 
